@@ -133,7 +133,7 @@ Al entrar a la máquina veremos que se nos inicia el programa propio del sistema
            margin-right: auto;
            width: 90%;">
 
-# Cuarta parte : Instalación de la máquina virtual en la nube (Azure)
+# Tercera parte : Instalación de la máquina virtual en la nube (Azure)
 
 
 
@@ -156,13 +156,18 @@ Al entrar a la máquina veremos que se nos inicia el programa propio del sistema
            margin-right: auto;
            width: 90%;">
 
+# Cuarta parte : Iniciar sesión Linux
 
+## 1 - Cambio de prompt y cambio de nombre del host
+
+En esta primera parte se nos pide cambiar el color y nombre del prompt para identificarnos en las capturas de pantalla. Como se puede ver en la siguinte captura he añadido al archivo correspondiente la línea al final del export PS1 para poder realizar este cambio.
 
 <img src="./Images/23.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
 
+Al realizar este primer cambio que se nos indica en la documentación lo primero que vemos es que el color del usuario ha cambiado a localhost en naranja, he de aclarar que la primera vez que hize estos cambios los hice en una cuenta dentro de la máquina que se llamaba ya con mi UO y no era la root pero más adelante ya se ve en capturas que uso la cuenta root con todos estos cambios.
 
 
 <img src="./Images/24.PNG" style="display: block; 
@@ -170,79 +175,147 @@ Al entrar a la máquina veremos que se nos inicia el programa propio del sistema
            margin-right: auto;
            width: 90%;">
 
-
-
-<img src="./Images/25.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
-
-<img src="./Images/26.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
-
-<img src="./Images/27.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
-
-<img src="./Images/28.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
-
-<img src="./Images/29.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
-
-<img src="./Images/30.PNG" style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 90%;">
-
-
+En esta captura que es de un ejercicio posterior se ve el resultado final que obtuve tras realizar el cambio ya sí en la cuenta root aunque no es una cosa que afecte para reconocer mis capturas ya que las primeras capturas antes de darme cuenta de este detalle salen igualmente con mi UO que era el nombre de la propia cuenta que estaba usando.
 
 <img src="./Images/31.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
 
+Por último procedo a cambiar con el comando hostnamectl el nombre que se me pide del hostname a linux.as.local lo cual que puede ver justo debajo de **AUTHENTICATION COMPLETE** en la captura. 
 
+<img src="./Images/25.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## 2 - systemd
+
+Como podemos ver, por defecto la máquina se encuentra en target multi-user
+
+<img src="./Images/36.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+En caso de cambiar el target con el comando systemclt isolate lo obtenido en el comando anterior cambiaría. Por ejemplo en el primer caso probamos a activar el modo de rescate con systemctl isolte rescue.target y tras reiniciar acabamos en el modo de rescate como se ve en la captura inferior.
+
+<img src="./Images/26.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Tras volver al modo multiusuario con systemctl isolate multi-user.target pruebo a cambiar al target runlevel6, en este caso lo que ocurre es que se reinicia el sistema. La imagen que muestro a continuación ocurrió la primera vez que lo intente que el sistema se quedó completamente colapsado pero tras reiniciar a la fuerza e intentar usar el runlevel6 otra vez comprobé que lo único que hace es reiniciar el sistema.
+
+<img src="./Images/27.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+En la siguiente captura vemos el PID del proceso systemd que en este caso es el PID 1
+
+<img src="./Images/28.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Si utilizo el comando **who -a** me confirma mediante consola que el nivel por defecto del sistema es el **runlevel3**
+
+<img src="./Images/37.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+En cuanto al **runlevel1** si lo comprobamos la máquina lo único que hace es inicarse en modo rescue por lo que para entrar en este modo valdría lo mismo usar el **rescue.target** o el **runlevel1.**
+
+<img src="./Images/38.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Como he comentado antes, el **runlevel6** lo que nos hace es reinicarnos por completo el sistema únicamente.
+
+## 3 - syslog
+
+En este caso no ha sido necesario instalar el rsyslog ya que ya estaba instalado correctamente como se puede ver en la captura.
+
+<img src="./Images/29.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+De seguido procedo a iniciar el proceso y habilitarlo para que se inicie con el sistema, esto me ha conllevado algún problema ya que me salía un error debido a que rc.local no era reconocido como un archivo ejecutable y por lo tanto no podía hacer el enable pero lo he solucionado sin problema con el comando *sudo chmod +x /etc/rclocal*.
+
+<img src="./Images/39.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/40.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## 4 - Login desde terminales
+
+En este punto procedí a hacer el kill desde la segunda máquina instancia de la máquina y como se comenta en el guión la sesión de la primera máquina se me cerró por completo, como se puede ver en la captura hago el kill del proceso de PID 1186 que es el de la primera máquina
+
+<img src="./Images/30.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+En cuanto a buscar el login del usuario tras buscar por el documento he encontrado este lugar donde pone Started User Login Management por lo que entiendo que aquí es donde comienza el proceso para el login del usuario
+
+<img src="./Images/41.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Aquí realizo el comando last para ver los login y caídas de los sistemas y podemos ver que este kill el last lo detecta como un *crash*
+
+<img src="./Images/31.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## 5 - Ejecución periódica de comandos
+
+Aquí muestro la captura de pantalla con los scripts de ejecución del cron
 
 <img src="./Images/32.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
 
+## 6 - Login desde red
 
+El paquete ssh estaba instalado correctamente. En este caso probé a hacer el ssh a la máquina que tenía en la otra sesión y tras comprobar la lista de procesos por aquí se puede ver los procesos ssh que había ejecutandose. En la documentación se refieren al segundo proceso ssh por lo que entiendo que es el segundo que aparece en la captura de pantalla, en este caso este se refiere a un terminal privado como podemos ver y el último que aparece se refiere al terminal pts/0
 
 <img src="./Images/33.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
 
-
+## 7 - Sistemas de ficheros en red
 
 <img src="./Images/34.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
 
+## 8 - Correo electrónico
 
+Aquí se puede ver como la comunicación entre las dos instancias de la máquina funciona perfectamente enviando correos de una a la otra.
 
 <img src="./Images/35.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Si lo que queremos es salir de la interfaz s-nail tenemos dos opciones, salir sin guardar los cambios para lo que usaremos el comando *xit o exit* o salir guardando todos los cambios hechos en la bandeja de entrada para o que usaremos *quit*
+
+<img src="./Images/42.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
