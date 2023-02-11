@@ -299,6 +299,8 @@ El paquete ssh estaba instalado correctamente. En este caso probé a hacer el ss
 
 ## 7 - Sistemas de ficheros en red
 
+En este punto solo debíamos buscar información acerca de SAMBA por lo que he usado tanto la página proporcionada como el comando man para encontrar información y saber bien como funcionaba y lo que hacía. Como resumen podríamos definir a SAMBA como el conjunto estándar de programass de interoperabilidad de Windows para Linux y Unix, siendo este un componente importante para integrar perfectamente servidores y escritorios Linux y Unix.
+
 <img src="./Images/34.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
@@ -316,6 +318,145 @@ Aquí se puede ver como la comunicación entre las dos instancias de la máquina
 Si lo que queremos es salir de la interfaz s-nail tenemos dos opciones, salir sin guardar los cambios para lo que usaremos el comando *xit o exit* o salir guardando todos los cambios hechos en la bandeja de entrada para o que usaremos *quit*
 
 <img src="./Images/42.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## 9 - Servicios de impresión
+
+En este apartado tenía que buscar información acerca de CUPS, el cual es un sistema de impresión desarrollado por Apple para sus dispositivos para imprimir en impresoras tanto locales como en red.
+
+
+# Ejercicios Opcionales
+
+## 1) Nueva máquina virtual con GUI
+
+En este primer punto tengo que crear la máquina virtual con GUI usando la misma ISO que en el primer apartado de los ejercicios obligatorios. En las siguientes 4 imágenes se ve toda la configuración inicial seleccionada, el comienzo de la instalación y por último ya la máquina dentro del entorno con todo actualizado y finalizado.
+
+<img src="./Images/43.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/44.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/45.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/46.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/47.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/48.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## 2) Documentación y ayuda
+
+#### Ejecuta el comando mandb
+
+Primero introduzco el comando mandb y en la imágen inferior podemos ver lo que hace, actualiza la base de datos del manual eliminando entradas antiguas si es necesario.
+
+<img src="./Images/49.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+#### Usa las órdenes man 
+
+Ahora procedo a buscar información de las órdenes whatis y apropos como se me dice en la documentación. Las dos siguientes capturas son primero de la información que se muestra de whatis con el man y la segunda del apropos.
+
+<img src="./Images/50.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+<img src="./Images/51.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Aquí también podemos ver las órdenes del sistema que hacen referencia a la órden de reboot
+
+<img src="./Images/52.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+#### Explica qué hace el comando cd /usr/bin; ls | xargs whatis | less
+
+Este comando nos muestra una lista ordenada alfabéticamente de todas las órdenes disponibles en el sistema, nos dicee exáctamente que hace cada una y con el less nos permite hacer un "scroll" a través de esta lista.
+
+<img src="./Images/53.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## Conceptos básicos de administración de paquetes
+
+####  Haz una lista de todos los paquetes del sistema, cuenta cuántos hay con wc
+
+Hay un total de 1510 paquetes
+
+<img src="./Images/54.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Al comprobar cuantos paquetes estaban actualizados en la máquina no he obtenido ningún resultado, esto es debido a que ya estaba actualizados todos desde otro ejercicio previo.
+
+<img src="./Images/55.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Como se me dice instalo el emacs con el comando yum install y se instala sin problemas
+
+<img src="./Images/56.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## Opciones del kernel. Mostrar la versión del kernel
+
+Primero con el comando grep y buscando el término name encontré una serie de comandos que podían proporcionarme la información que necesitaba
+
+<img src="./Images/57.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Tras informarme sobre los mismo decidí usar el comando uname, a continuación muestro la información que porporcionaba el man
+
+<img src="./Images/59.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+Con la información obtenida del man vemos que para sacar la version del kernel hay que usar la opción --kernel-version del comando uname la cual nos muestra la versión del mismo
+
+<img src="./Images/58.PNG" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 90%;">
+
+## Mensaje de presentación /etc/motd, /etc/issue
+
+Aquí se puede ver el resultado tras editar los archivos de motd e issue
+
+<img src="./Images/60.PNG" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 90%;">
