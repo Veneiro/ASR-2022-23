@@ -79,7 +79,9 @@ Tras restaurar la instantánea que había creado al iniciar esta máquina e inic
 
 Al borra la máquina junto con todos sus ficheros todas las instantáneas se borran.
 
-### Añadir un nuevo disco a las MVs
+### C. Añadir un nuevo disco a las MVs
+
+#### Adición de un segundo disco a un sistema Linux ya instalado
 
 Procedo a crear un nuevo disco duro virtual con un tamaño de 8 GB.
 
@@ -164,20 +166,28 @@ Ahora voy a crear el filesystem para todas las particiones. Para el primer disco
            margin-right: auto;
            width: 100%;">
 
+El proceso para crear el sistema de archivos es el mismo en el caso de xfs pero para cambiarle el nombre a la partición deberemos usar xfs_admin como se ve abajo.
+
 <img src="./Images/Screenshot_34.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
+
+Y de la misma manera para FAT32 pero en este caso usaremos fatlabel para cambiar el nombre.
 
 <img src="./Images/Screenshot_35.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
 
+Aquí vemos ya las tres particiones con el formato y el nombre correspondientes.
+
 <img src="./Images/Screenshot_33.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
+
+Después he usado el mount de cada una de las particiones para montarlas en el sistema de archivos y aquí podemos ver que he conseguido acceder con el cd perfectamente a la carpeta e incluso crear un archivo de texto de prueba en cada una de ellas.
 
 <img src="./Images/Screenshot_23.png" style="display: block; 
            margin-left: auto;
@@ -194,37 +204,118 @@ Ahora voy a crear el filesystem para todas las particiones. Para el primer disco
            margin-right: auto;
            width: 100%;">
 
+También hago la prueba con el comando lsblk -f para ver que todas las particiones de ambos discos están perfectamente creadas y con los nombres.
+
 <img src="./Images/Screenshot_26.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
+
+#### Adición de nuevos discos a un sistema Windows ya instalado.
+
+Aquí se puede ver como he instalado ambos discos en el controlador IDE de la máquina Windows.
 
 <img src="./Images/Screenshot_27.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
 
+Ambos discos los formateo como GPT desde el administrador de discos de Windows.
+
 <img src="./Images/Screenshot_28.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
+
+Con el primer disco selecciono la opción de crear volumen simple y después lo inicio como sistema de archivos NTFS.
 
 <img src="./Images/Screenshot_29.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
 
+Con el segundo disco he hecho lo mismo que el primero pero creando dos particiones diferentes, es decir partiendo el disco en dos volumenes simples de la mitad del espacio total. Este sería el resultado tras la operación.
+
 <img src="./Images/Screenshot_30.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
+
+Después como se me dice borro ambas particiones del disco 2 y la única del disco 1 y dejo el espacio como no asignado.
 
 <img src="./Images/Screenshot_31.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
 
+Tras unir los dos discos mediante el NTFS distribuido la nueva unidad tiene el tamaño total unido de ambos discos, 8156 MB
+
 <img src="./Images/Screenshot_32.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Si borro el volumen distribuido que une ambos discos se borra por completo por lo que la nueva unidad no tiene espacio ya que se borra.
+
+### D. Transvase de discos entre máquias con distintos operativos
+
+Creo un disco en formato NTFS en la máquina Windows para realizar el transvase.
+
+<img src="./Images/Screenshot_36.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Creo un documento de texto, en este caso llamado Bienvenidos con el texto, "Bienvenido a mi máquina virtual!" en el interior. Este documento será el que abra más adelante en el sistema linux.
+
+<img src="./Images/Screenshot_37.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+<img src="./Images/Screenshot_38.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Desinstalo el disco de la máquina Windows y lo instalo en la máquina linux, como se puede ver el disco llamado Windows Server 2022_1
+
+<img src="./Images/Screenshot_39.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Instalo ambos paquetes, epel-release y ntfs-3g para que mi sistema linux pueda leer los discos con el formato ntfs.
+
+<img src="./Images/Screenshot_40.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Si probamos el comando lsblk -f podemos ver que el sistema linux ya reconoce el disco.
+
+<img src="./Images/Screenshot_41.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Tras montarlo con el comando mount, en este caso en la carpeta /mnt/prueba podemos ver que el documento de texto llamado Bienvenidos se encuentra en el interior, el documento es el que había creado en la máquina Windows.
+
+<img src="./Images/Screenshot_42.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+Como podemos ver aquí podemos previsualizar el documento y editarlo con normalidad.
+
+<img src="./Images/Screenshot_43.png" style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;">
+
+En el disco 1 solo encontramos dos particiones, una que no tiene ninguna clase de formato o nombre y otra que es la del sistema de archivos. La partición 1 no tiene nada en su interior.
+
+<img src="./Images/Screenshot_44.png" style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;">
