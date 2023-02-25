@@ -113,7 +113,7 @@ Y aquí se puede ver el resultado que obtenemos del comando xfs_growfs al compro
            margin-right: auto;
            width: 100%;">
 
-He ejecutado los comandos que se pedían para que se pueda ver que el disco ha auentado de tamaño, por ejemplo en el lvscan se puede ver bien que ahora es de 10GB t e el pvscan se ve que tiene 4GB libres que son los que acabo de añadir.
+He ejecutado los comandos que se pedían para que se pueda ver que el disco ha aumentado de tamaño, por ejemplo en el lvscan se puede ver bien que ahora es de 10GB t e el pvscan se ve que tiene 4GB libres que son los que acabo de añadir.
 
 <img src="./Images/Screenshot_2%20(3).png" style="display: block; 
            margin-left: auto;
