@@ -97,6 +97,30 @@ Al llegar a este punto me he encontrado con el problema de la falta del `/boot/e
 	![[Screenshot_52.png]]
 	![[Screenshot_53.png]]
 	![[Screenshot_54.png]]
-4. Fuerzo la primera copia de seguridad entrando al vaultAS anteriormente creado
+4. Fuerzo la primera copia de seguridad entrando al vaultAS anteriormente creado.
 	![[Screenshot_55.png]]
-	
+	![[Screenshot_56.png]]
+5. En el punto 5 elimino el grupo de recursos aunque puede que se vea en alguna captura más debido a que al terminar me di cuenta de que el vault y la copia estaban en este grupo. Aun así no ha influido en el proceso.
+6. Aquí procedo a crear lo siguiente
+	1. Primero creo un nuevo grupo de recursos llamado `rg-ejRestauracion`
+	2. Después creo una nueva red virtual llamada `rg-ejRestauracion`
+	![[Screenshot_59.png]]
+	![[Screenshot_60.png]]
+	3. Creo una cuenta de almacenamiento en este grupo
+	![[Screenshot_65.png]]
+	![[Screenshot_66.png]]
+	4. Entro al *Centro de Copias de Seguridad* y realizo la restauración de la copia en una nueva máquina
+	![[Screenshot_67.png]]
+	![[Screenshot_68.png]]
+	![[Screenshot_69.png]]
+8. En este apartado vamos a habilitar la entrada rdp y asignar una ip pública a la máquina para poder conectarnos y ver si la copia de seguridad se ha realizado correctamente
+	1. En este punto he creado el grupo de nsg-resstauracion y he permitido en las reglas de entrada el rdp
+		![[Screenshot_72.png]]
+		![[Screenshot_73.png]]
+	2. Seguido de esto he asignado a la interfaz de red una ip pública para poder conectarme a la máquina mediante rdp
+		![[Screenshot_71.png]]
+	3. Por último me conecto a la máquina virtual por rdp como se puede ver en el título de la ventana y ahí en el escritorio tengo el archivo alumnos.txt
+		![[Screenshot_75.png]]
+
+
+

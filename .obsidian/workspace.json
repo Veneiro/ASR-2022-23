@@ -11,11 +11,9 @@
             "id": "a3e0856319eec2f8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Práctica 4 ASR/Práctica 4.md",
-                "mode": "source",
-                "source": false
+                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Práctica 4 ASR/Práctica 4.md",
+                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Práctica 4 ASR/Práctica 4.md",
+                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Práctica 4 ASR/Práctica 4.md"
+                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf"
               }
             }
           }
@@ -146,24 +144,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a3e0856319eec2f8",
+  "active": "412dfbbe3b0dfffc",
   "lastOpenFiles": [
-    "Práctica 4 ASR/Images/Screenshot_54.png",
-    "Práctica 4 ASR/Images/Screenshot_53.png",
-    "Práctica 4 ASR/Images/Screenshot_52.png",
-    "Práctica 4 ASR/Images/Screenshot_51.png",
-    "Práctica 4 ASR/Images/Screenshot_50.png",
-    "Práctica 4 ASR/Images/Screenshot_49.png",
-    "Práctica 4 ASR/Images/Screenshot_48.png",
-    "Práctica 4 ASR/Images/Screenshot_47.png",
-    "Práctica 4 ASR/Images/Screenshot_46.png",
-    "Práctica 4 ASR/Images/Screenshot_55.png",
-    "Práctica 4 ASR/UO277172_Práctica 4.pdf",
-    "Práctica 3 ASR/Práctica 3.md",
     "Práctica 4 ASR/Práctica 4.md",
+    "Práctica 4 ASR/UO277172_Práctica 4.pdf",
+    "Práctica 4 ASR/Old",
+    "Práctica 4 ASR/Images/Screenshot_69.png",
+    "Práctica 4 ASR/Images/Screenshot_76.png",
+    "Práctica 4 ASR/Images/Screenshot_67.png",
+    "Screenshot_64.png",
+    "Práctica 4 ASR/Images/Screenshot_74.png",
+    "Práctica 4 ASR/Images/Screenshot_73.png",
+    "Práctica 4 ASR/Images/Screenshot_72.png",
+    "Práctica 4 ASR/Images/Screenshot_71.png",
+    "Práctica 4 ASR/Images/Screenshot_70.png",
+    "Práctica 4 ASR/Images/Screenshot_68.png",
+    "Práctica 4 ASR/Old/UO277172_Práctica 4.pdf",
+    "Práctica 3 ASR/Práctica 3.md",
     "Práctica 3 ASR/UO277172_Práctica 3.pdf",
     "Práctica 2 ASR/UO277172_Práctica 2.pdf",
-    "Práctica 4 ASR/Images/Screenshot_44.png",
     "Práctica 4 ASR/Images",
     "Práctica 4 ASR",
     "Práctica 1 ASR/Práctica 1.md"
