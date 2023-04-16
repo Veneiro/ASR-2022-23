@@ -1,4 +1,7 @@
 {
   "accentColor": "#fff82e",
-  "baseFontSize": 18
+  "baseFontSize": 19,
+  "enabledCssSnippets": [
+    "centerImage"
+  ]
 }

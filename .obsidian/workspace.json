@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "01fc28f931cf041a",
+        "id": "5c748448d02f8bca",
         "type": "tabs",
         "children": [
           {
-            "id": "a3e0856319eec2f8",
+            "id": "d8c6d9350c981cb5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf"
+                "file": "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 275.5
   },
   "right": {
     "id": "516a5cff2ec91341",
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf",
+                "file": "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf",
+                "file": "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Práctica 4 ASR/UO277172_Práctica 4.pdf"
+                "file": "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md"
               }
             }
           }
@@ -144,27 +146,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "412dfbbe3b0dfffc",
+  "active": "d8c6d9350c981cb5",
   "lastOpenFiles": [
+    "Práctica 8 ASR/Práctica 8.md",
+    "Práctica 8 ASR/Images/Screenshot_230.png",
+    "Práctica 8 ASR/Images/Screenshot_229.png",
+    "Práctica 8 ASR/Images/Screenshot_228.png",
+    "Práctica 8 ASR/Images/Screenshot_227.png",
+    "Práctica 8 ASR/Images/Screenshot_226.png",
+    "Práctica 8 ASR/Images/Screenshot_231.png",
+    "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md",
+    "Trabajo Teoría Bloque 1/Trabajo Teoría 2.3.pdf",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría.pdf",
+    "Trabajo Teoría Bloque 1/PDF",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.2.pdf",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.1.pdf",
+    "Trabajo Teoría Bloque 1/Images/Screenshot_142.png",
+    "Trabajo Teoría Bloque 1/Images/Screenshot_224.png",
+    "Trabajo Teoría Bloque 1/Images/Screenshot_141.png",
+    "Trabajo Teoría Bloque 1/Images/Screenshot_140.png",
+    "Trabajo Teoría Bloque 1/Images/IMG_20230326_130015.1.jpg.~tmp",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.0.pdf",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.9.pdf",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.8.pdf",
+    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.7.pdf",
+    "Práctica 1 ASR/Práctica 1.md",
+    "IMG_20230318_140219.jpg{width=50%}.md",
+    "Práctica 7 ASR/Práctica 7.md",
+    "Práctica 6 ASR/Práctica 6.md",
+    "Práctica 5 ASR/Práctica 5.md",
     "Práctica 4 ASR/Práctica 4.md",
-    "Práctica 4 ASR/UO277172_Práctica 4.pdf",
-    "Práctica 4 ASR/Old",
-    "Práctica 4 ASR/Images/Screenshot_69.png",
-    "Práctica 4 ASR/Images/Screenshot_76.png",
-    "Práctica 4 ASR/Images/Screenshot_67.png",
-    "Screenshot_64.png",
-    "Práctica 4 ASR/Images/Screenshot_74.png",
-    "Práctica 4 ASR/Images/Screenshot_73.png",
-    "Práctica 4 ASR/Images/Screenshot_72.png",
-    "Práctica 4 ASR/Images/Screenshot_71.png",
-    "Práctica 4 ASR/Images/Screenshot_70.png",
-    "Práctica 4 ASR/Images/Screenshot_68.png",
-    "Práctica 4 ASR/Old/UO277172_Práctica 4.pdf",
-    "Práctica 3 ASR/Práctica 3.md",
-    "Práctica 3 ASR/UO277172_Práctica 3.pdf",
-    "Práctica 2 ASR/UO277172_Práctica 2.pdf",
-    "Práctica 4 ASR/Images",
-    "Práctica 4 ASR",
-    "Práctica 1 ASR/Práctica 1.md"
+    "Práctica 3 ASR/Práctica 3.md"
   ]
 }
