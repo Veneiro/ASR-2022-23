@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5c748448d02f8bca",
+        "id": "a57040d3bf431586",
         "type": "tabs",
         "children": [
           {
-            "id": "d8c6d9350c981cb5",
+            "id": "f137028c3d39d464",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Práctica 8 ASR/Práctica 8.md",
+                "file": "Trabajo Teoría Bloque 2/Ampliación del Servidor en Almalinux.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "95f7a67ed197fbf9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Práctica 8 ASR/Práctica 8.md",
+                "file": "Trabajo Teoría Bloque 2/Ampliación del Servidor en Almalinux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Práctica 8 ASR/Práctica 8.md",
+                "file": "Trabajo Teoría Bloque 2/Ampliación del Servidor en Almalinux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Práctica 8 ASR/Práctica 8.md"
+                "file": "Trabajo Teoría Bloque 2/Ampliación del Servidor en Almalinux.md"
               }
             }
           }
@@ -146,32 +154,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8c6d9350c981cb5",
+  "active": "f137028c3d39d464",
   "lastOpenFiles": [
-    "Práctica 1 ASR/Práctica 1.md",
-    "Práctica 8 ASR/Práctica 8.md",
-    "Práctica 7 ASR/Práctica 7.md",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_176.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_175.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_174.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_177.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_172.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_173.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_171.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_170.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_169.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_168.png",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_161(cut2).png",
     "Trabajo Teoría Bloque 1/Servidor Dedicado en AlmaLinux.md",
-    "Práctica 8 ASR/Images/Screenshot_230.png",
-    "Práctica 8 ASR/Images/Screenshot_229.png",
-    "Práctica 8 ASR/Images/Screenshot_228.png",
-    "Práctica 8 ASR/Images/Screenshot_227.png",
-    "Práctica 8 ASR/Images/Screenshot_226.png",
-    "Práctica 8 ASR/Images/Screenshot_231.png",
+    "Trabajo Teoría Bloque 2/Ampliación del Servidor en Almalinux.md",
+    "Trabajo Teoría Bloque 2/Images/Screenshot_164(pixel).png.0.pdnSave",
+    "Teoría/Bloque 4.pdf",
+    "Trabajo Teoría Bloque 2/Images",
+    "Trabajo Teoría Bloque 2",
+    "Práctica 8 ASR/Práctica 8.md",
+    "Práctica 1 ASR/Práctica 1.md",
+    "Práctica 7 ASR/Práctica 7.md",
     "Trabajo Teoría Bloque 1/Trabajo Teoría 2.3.pdf",
     "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría.pdf",
     "Trabajo Teoría Bloque 1/PDF",
     "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.2.pdf",
     "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.1.pdf",
-    "Trabajo Teoría Bloque 1/Images/Screenshot_142.png",
-    "Trabajo Teoría Bloque 1/Images/Screenshot_224.png",
-    "Trabajo Teoría Bloque 1/Images/Screenshot_141.png",
-    "Trabajo Teoría Bloque 1/Images/Screenshot_140.png",
     "Trabajo Teoría Bloque 1/Images/IMG_20230326_130015.1.jpg.~tmp",
-    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 2.0.pdf",
-    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.9.pdf",
-    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.8.pdf",
-    "Trabajo Teoría Bloque 1/PDF/Trabajo Teoría 1.7.pdf",
     "IMG_20230318_140219.jpg{width=50%}.md",
     "Práctica 6 ASR/Práctica 6.md",
     "Práctica 5 ASR/Práctica 5.md",
