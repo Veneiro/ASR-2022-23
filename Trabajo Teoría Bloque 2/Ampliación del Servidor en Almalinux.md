@@ -9,6 +9,8 @@ El equipo utilizado sigue siendo el mismo que para el anterior trabajo con las c
 - SO: AlmaLinux 9.1 (Lime Lynx) 64 bits
 A pesar de ser un equipo antiguo en cuanto a componentes ha demostrado ser suficientemente potente para los usos que le estoy dando de manera regular.
 
+<div style="page-break-after: always; visibility: hidden"> \pagebreak </div>
+
 ## Página del router
 
 Como siempre, para todo el proceso de abrir los puertos antes de nada deberemos saber donde se realiza este proceso. En este caso deberemos entrar a la dirección *192.168.1.1* que es la ip por defecto de nuestra red en la cual se encuentra la configuración del router de nuestro proveedor. Este proceso será realizado desde el router que ofrece el proveedor de Jazztel por defecto.
@@ -24,6 +26,8 @@ Aquí ya se nos presenta toda la configuración del router y todo lo que podemos
 ![[Screenshot_159(pixel).png|center|560]]
 
 En esta pantalla tendremos algo de información y abajo del todo una tabla donde añadiremos la excepciones o normas para los puertos.
+
+<div style="page-break-after: always; visibility: hidden"> \pagebreak </div>
 
 ## Explicación del proceso (Servidor de Minecraft)
 
@@ -59,6 +63,8 @@ Y se puede ver que podemos entrar sin mayor problema y jugar con normalidad.
 
 ![[Trabajo Teoría Bloque 2/Images/Screenshot_166.png|center|560]]
 
+<div style="page-break-after: always; visibility: hidden"> \pagebreak </div>
+
 ## Breve explicación para L4D2
 
 Si quiero configurar esto para el otro servidor de Left4Dead2 el proceso es similar, simplemente tendré que abrir el puerto UDP, que es el puerto necesario para este juego con el número de puerto que necesito que sería el 27015.
@@ -69,6 +75,8 @@ Sólamente con esto y abrir los puertos en el firewall de la máquina este servi
 
 Para el firewall se utilizará *sudo firewall-cmd --permanent --zone=public --add-port=27015/tcp* y  *sudo *sudo iptable -I INPUT -p tcp --dport 27015 --syn -j ACCEPT* y con esto ya estaría listo. Como se puede ver el comando es igual cambiando el puerto, que en este caso es el 27015, el puerto por defecto del Left4Dead2.
 
+<div style="page-break-after: always; visibility: hidden"> \pagebreak </div>
+
 ## Conexión remota a la máquina Almalinux
 
 Durante todo este rato y debido a que no podía transportar el servidor de un lado para otro he buscado diferentes soluciones para conectarme de manera remota y manejarlo desde cualquier lugar. Estás soluciones empezaron por diversos programas de compartición de pantalla como puede ser el Teamviewer pero finalmente he acabado usando el RDP propio de Windows por mayor comodidad.
@@ -77,17 +85,17 @@ Este servicio se puede usar para conectarse a la máquina linux pero deberemos i
 
 El servicio en cuestión se llama **xrdp** que se podrá instalar con el simple uso de un `dnf install xrdp`. 
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_168.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_168.png|center|560]]
 
 Con esto ya tendremos lo necesario para conectarnos al menos de manera local por rdp, solo debemos ir al equipo Windows con el que nos queremos conectar y poner la ip de nuestra máquina junto al puerto 3389 que es el puerto del servicio rdp. 
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_169.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_169.png|center|560]]
 
 Para esta prueba he abierto en el firewall de mi servidor este puerto al igual que hice en el paso anterior con el comando `firewall-cmd` y el `iptable` para evitar cualquier problema.
 
 Tras darle al botón de conectar nos pedirá aceptar una serie de certificados para conectarnos a la máquina que al aceptarlos nos darán paso a la siguiente pantalla.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_170.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_170.png|center|560]]
 
 Esta parte del proceso es la que mayor problemas puede causar a pesar de parecer de lo más sencilla. 
 
@@ -97,7 +105,7 @@ El problema se presenta cuando nos damos cuenta de que si intentamos conectarnos
 
 La solución para esto es sencilla y por la estructura de mi máquina no es dificil de solucionar a pesar de que descubrir esta solución me llevó bastante tiempo. Tendremos que iniciar sesión desde una cuenta secundaria del propio servidor, en este caso he usado la cuenta que había creado para el servidor de Left4Dead2 en la primera entrega de teoría. En este momento el servicio ya está activado y si intentamos entrar de nuevo en la cuenta principal ahora si que entraremos directamente al escritorio de la máquina.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_171.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_171.png|center|560]]
 
 De esta manera ya sabemos como hacer el proceso de manera local. Ahora bien, ¿cómo puedo usar esto para conectarme desde otra localización fuera de mi red local? La mejor solución que he encontrado es una VPN, de esta manera solo los ordenadores que yo tenga en la misma podrán acceder remotamente a mi servidor como bien podemos comprobar en algunos servicios de la Universidad de Oviedo que solo son accesibles desde la propia red interna de la universidad.
 
@@ -105,11 +113,13 @@ Esto me evita de posibles problemas de accesos indeseados que podrían suceder s
 
 Entonces tras comentar esto procedo a entrar al servicio RDP en Windows pero en este caso usaré la IP que me aparece para la máquina AlmaLinux en Hamachi.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_172.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_172.png|center|560]]
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_173.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_173.png|center|560]]
 
 Como se puede ver el proceso y resultado es el mismo pero en este caso podemos ver que la ip superior es la del Hamachi en lugar de la ip local que aparecía anteriormente. Este ha sido un recurso esencial que me ha permitido gestionar el servidor a pesar de no poder manipularlo físicamente.
+
+<div style="page-break-after: always; visibility: hidden"> \pagebreak </div>
 
 ## Servidor básico Apache
 
@@ -119,7 +129,7 @@ Todo este proceso lo he hecho simplemente siguiendo el principio del guión de l
 
 Primero de todo instalo el servicio httpd.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_174.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_174.png|center|560]]
 
 Tras hacer esto voy a usar los comandos `systemctl start httpd` y `systemctl enable httpd` para activar y habilitar el servicio en el arranque.
 
@@ -131,15 +141,15 @@ Después de esto cambio los permisos del archivo html de la carpeta con chmod 75
 
 Tras hacer esto si entro desde la máquina linux a localhost podré ver la página.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_175.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_175.png|center|560]]
 
 También si desde otro ordenador de la misma red local accedo a la ip de la máquina `192.168.1.130` usando el puerto `80` podré entrar a la página.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_176.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_176.png|center|560]]
 
 Y la última forma de entrar tal cual está ahora configurado sería estando en la VPN de la máquina como se puede ver aquí abajo.
 
-![[Trabajo Teoría Bloque 2/Images/Screenshot_177.png]]
+![[Trabajo Teoría Bloque 2/Images/Screenshot_177.png|center|560]]
 
 Es un servicio simple pero quería configurarlo para poder tener disponible esta página web simple que he creado que me muestra los precios de la Gasolina en este caso en Asturias y se va actualizando periódicamente.
 
